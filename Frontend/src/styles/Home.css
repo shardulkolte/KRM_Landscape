@@ -12,7 +12,7 @@
   padding-top: 64px;
   text-align: center;
   flex-direction: column;
-  overflow: hidden; /* add this if needed */
+  overflow: hidden;
 }
 
 .hero-text {
@@ -28,36 +28,6 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* ARROWS */
-.arrow {
-  position: fixed; /* <-- changed from absolute */
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 999; /* increased to stay on top */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.arrow:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-  transform: translateY(-50%) scale(1.1);
-}
-.arrow.left {
-  left: 16px; /* adjust as needed */
-}
-
-.arrow.right {
-  right: 16px; /* adjust as needed */
-}
 
 /* SECTION STYLING */
 .section {
@@ -107,12 +77,6 @@
   .hero-text {
     padding: 1.5rem;
     font-size: 0.95rem;
-  }
-
-  .arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 20px;
   }
 
   .section {

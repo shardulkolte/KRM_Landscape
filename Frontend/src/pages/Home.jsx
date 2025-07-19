@@ -6,7 +6,8 @@ import {
   Stack,
   Container,
   Paper,
-  AppBar,
+  AppBar,useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import ArrowCircleLeftSharpIcon from "@mui/icons-material/ArrowCircleLeftSharp";
 import ArrowCircleRightSharpIcon from "@mui/icons-material/ArrowCircleRightSharp";
@@ -43,6 +44,8 @@ const Home = () => {
 
   const nextSlide = () => setCurrent((prev) => (prev + 1) % length);
   const prevSlide = () => setCurrent((prev) => (prev - 1 + length) % length);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Box>
@@ -50,13 +53,49 @@ const Home = () => {
         <Navbar />
       </AppBar>
 
-      <Box className="hero-section" style={{ backgroundImage: `url(${slides[current].image})` }}>
-        <IconButton className="arrow left" onClick={prevSlide}>
-          <ArrowCircleLeftSharpIcon fontSize="inherit" />
+      <Box className="hero-section" style={{ backgroundImage: `url(${slides[current].image})` , position: "relative"}}>
+        <IconButton
+          onClick={prevSlide}
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: isMobile ? 10 : 30,
+            transform: "translateY(-50%)",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            color: "#fff",
+            width: isMobile ? 44 : 60,
+            height: isMobile ? 44 : 60,
+            '&:hover': {
+              backgroundColor: "rgba(0, 0, 0, 0.8)",
+              transform: "translateY(-50%) scale(1.1)",
+            },
+            zIndex: 10,
+          }}
+        >
+          <ArrowCircleLeftSharpIcon sx={{ fontSize: isMobile ? 26 : 32 }}/>
         </IconButton>
-        <IconButton className="arrow right" onClick={nextSlide}>
-          <ArrowCircleRightSharpIcon fontSize="inherit" />
+        <IconButton
+          onClick={nextSlide}
+          sx={{
+            position: "absolute",
+            top: "50%",
+            right: isMobile ? 10 : 30,
+            transform: "translateY(-50%)",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            color: "#fff",
+            width: isMobile ? 44 : 60,
+            height: isMobile ? 44 : 60,
+            '&:hover': {
+              backgroundColor: "rgba(0, 0, 0, 0.8)",
+              transform: "translateY(-50%) scale(1.1)",
+            },
+            zIndex: 10,
+          }}
+        >
+          <ArrowCircleRightSharpIcon sx={{ fontSize: isMobile ? 26 : 32 }}/>
         </IconButton>
+
+        
         <Box className="hero-text">
           <Typography variant="h3" className="hero-title">
             {slides[current].title}
@@ -142,8 +181,6 @@ const Home = () => {
 };
 
 export default Home;
-
-
 
 
 
