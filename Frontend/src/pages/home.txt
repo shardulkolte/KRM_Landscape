@@ -92,3 +92,32 @@
           </Button>
         </Stack>
       </Box> */}
+
+
+      //***************************************************************************
+
+
+      <Box
+        sx={{
+          position: "relative",
+          height: "90vh",
+          backgroundImage: `url(${images[current]})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <IconButton
+          onClick={prevSlide}
+          sx={{ position: "absolute", left: 20, color: "white", zIndex: 10 }}
+        >
+          <ArrowBackIos />
+        </IconButton>
+        <IconButton
+          onClick={nextSlide}
+          sx={{ position: "absolute", right: 20, color: "white", zIndex: 10 }}
+        >
+          <ArrowForwardIos />
+        </IconButton>

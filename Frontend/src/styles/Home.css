@@ -30,20 +30,20 @@
 
 /* ARROWS */
 .arrow {
-  position: fixed; 
-  
+  position: fixed; /* <-- changed from absolute */
+  top: 50%;
   transform: translateY(-50%);
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  font-size: 50px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 1200;
+  z-index: 999; /* increased to stay on top */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -52,14 +52,11 @@
   transform: translateY(-50%) scale(1.1);
 }
 .arrow.left {
-  top: 20%;
-  right: 700px;
-   /* adjust as needed */
+  left: 16px; /* adjust as needed */
 }
 
 .arrow.right {
-  top: 15%;
-  left: 700px; /* adjust as needed */
+  right: 16px; /* adjust as needed */
 }
 
 /* SECTION STYLING */
