@@ -199,7 +199,7 @@ const Home = () => {
       <Box className="section service-bg">
         <Container>
           <Typography variant="h4" fontWeight="bold" gutterBottom>
-            Services We Offer
+            Main Services We Offer
           </Typography>
           <Typography paragraph>
             From nurturing roots to crafting entire green ecosystems, KRM Landscape delivers a full spectrum of landscape solutions.
