@@ -1,37 +1,32 @@
-/* HERO SECTION */
 .hero-section {
-  position: relative;
-  width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 64px; /* Leaves space for navbar */
   color: white;
-  padding-top: 64px;
-  text-align: center;
-  flex-direction: column;
-  overflow: hidden;
 }
 
 .hero-text {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 2.5rem 2rem;
+  padding: 2rem 3rem;
   border-radius: 12px;
-  max-width: 850px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  text-align: center;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.hero-text:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+.carousel .slide img {
+  height: 100vh;
+  object-fit: cover;
 }
 
-
-/* SECTION STYLING */
 .section {
   padding: 5rem 1rem;
+  text-align: center;
 }
 
 .soft-bg {
@@ -42,52 +37,41 @@
   background: linear-gradient(to right, #e8f5e9, #ffffff);
 }
 
-/* INFO CARDS */
 .info-card {
   padding: 2rem;
-  text-align: center;
-  border-radius: 16px;
+  margin: 1rem;
   background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-}
-.info-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* INTRO BOX */
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
 .krm-intro {
   padding: 3rem;
   border-radius: 20px;
   background-color: #ffffff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  margin-bottom: 3rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* LOGO */
 .krm-logo {
   width: 120px;
   height: auto;
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-/* RESPONSIVE ADJUSTMENTS */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .hero-text {
     padding: 1.5rem;
     font-size: 0.95rem;
   }
 
-  .section {
-    padding: 3rem 1rem;
-  }
-
-  .info-card {
-    margin-bottom: 2rem;
-  }
-
-  .krm-intro {
-    padding: 2rem;
+  .carousel .slide img {
+    height: 70vh;
   }
 }
