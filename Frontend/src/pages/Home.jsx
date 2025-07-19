@@ -11,10 +11,13 @@ import {
   AppBar,
   useTheme,
   useMediaQuery,
+  Card,
+  CardContent,
 } from "@mui/material";
 import ArrowCircleLeftSharpIcon from "@mui/icons-material/ArrowCircleLeftSharp";
 import ArrowCircleRightSharpIcon from "@mui/icons-material/ArrowCircleRightSharp";
 import { Spa, Forest, Grass } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 import Navbar from "../components/Navbar";
 
@@ -48,6 +51,7 @@ const Home = () => {
   const prevSlide = () => setCurrent((prev) => (prev - 1 + length) % length);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const navigate = useNavigate();
 
   return (
     <Box>
@@ -177,15 +181,17 @@ const Home = () => {
         </Container>
       </Box>
 
-            {/* Quote Section */}
+      {/* Quote Section */}
       <Box className="section quote-bg">
         <Container>
-          <Typography variant="h5" className="quote-text" gutterBottom>
-            “Where your ideas grow roots, and our expertise helps them bloom.”
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            — The KRM Landscape Team
-          </Typography>
+          <div className="quote-bg quote-bg-1">
+            <Typography variant="h5" className="quote-text" gutterBottom>
+              “Where your ideas grow roots, and our expertise helps them bloom.”
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary">
+              — The KRM Landscape Team
+            </Typography>
+          </div>
         </Container>
       </Box>
 
@@ -229,7 +235,13 @@ const Home = () => {
                 image: "/images/maintenance.jpeg",
               },
             ].map((service, index) => (
-              <Paper key={index} elevation={4} className="service-card">
+              <Paper
+                key={index}
+                elevation={4}
+                className="service-card"
+                onClick={() => navigate("/services")}
+                style={{ cursor: "pointer" }}
+              >
                 <img src={service.image} alt={service.title} className="service-img" />
                 <Box p={2}>
                   <Typography variant="h6" fontWeight="bold">
@@ -243,8 +255,64 @@ const Home = () => {
         </Container>
       </Box>
 
+      {/* Quote Section */}
+      <Box className="section quote-bg">
+        <Container>
+          <div className="quote-bg quote-bg-2">
+            <Typography variant="h4" className="quote-text" gutterBottom>
+              “Where your ideas grow roots, and our expertise helps them bloom.”
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary">
+              — The KRM Landscape Team
+            </Typography>
+          </div>
+        </Container>
+      </Box>
+
+      <Box className="contact-section">
+        <Container>
+          <Typography variant="h4" fontWeight="bold" gutterBottom>
+            Contact Us
+          </Typography>
+
+          <Box className="contact-cards">
+            <Card elevation={6} className="contact-card">
+              <CardContent>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  Visit Us
+                </Typography>
+                <Typography>
+                  KRM Landscape Pvt. Ltd.<br />123 Greenway Avenue,<br />Pune, Maharashtra, India
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card elevation={6} className="contact-card">
+              <CardContent>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  Get In Touch
+                </Typography>
+                <Typography>
+                  Phone: +91 98765 43210<br />
+                  Email: contact@krmlandscape.com<br />
+                  Hours: Mon–Sat, 9am – 6pm
+                </Typography>
+              </CardContent>
+            </Card>
+
+            {/* Add more cards here if needed */}
+          </Box>
+        </Container>
+      </Box>
+
     </Box>
   );
 };
 
 export default Home;
+
+
+
+
+
+
