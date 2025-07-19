@@ -1,0 +1,30 @@
+/* === CONTACT SECTION === */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.contact-section {
+  background: linear-gradient(to right, #e8f5e9, #ffffff);
+  padding: 8rem 1rem;
+  text-align: center;
+}
+
+.contact-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card .MuiTypography-h6 {
+  color: #2e7d32;
+}
