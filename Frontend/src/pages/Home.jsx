@@ -20,6 +20,7 @@ import { Spa, Forest, Grass } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 import Navbar from "../components/Navbar";
+import ContactUs from "../components/ContactUs";
 
 const slides = [
   {
@@ -269,41 +270,9 @@ const Home = () => {
         </Container>
       </Box>
 
-      <Box className="contact-section">
-        <Container>
-          <Typography variant="h4" fontWeight="bold" gutterBottom>
-            Contact Us
-          </Typography>
+      {/* Contact Us Section */}
 
-          <Box className="contact-cards">
-            <Card elevation={6} className="contact-card">
-              <CardContent>
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                  Visit Us
-                </Typography>
-                <Typography>
-                  KRM Landscape Pvt. Ltd.<br />123 Greenway Avenue,<br />Pune, Maharashtra, India
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card elevation={6} className="contact-card">
-              <CardContent>
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                  Get In Touch
-                </Typography>
-                <Typography>
-                  Phone: +91 98765 43210<br />
-                  Email: contact@krmlandscape.com<br />
-                  Hours: Mon–Sat, 9am – 6pm
-                </Typography>
-              </CardContent>
-            </Card>
-
-            {/* Add more cards here if needed */}
-          </Box>
-        </Container>
-      </Box>
+      <ContactUs/>
 
     </Box>
   );

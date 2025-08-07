@@ -91,13 +91,13 @@ const Footer = () => {
             <Stack direction="row" alignItems="center" spacing={1} mb={1}>
               <PhoneIcon sx={{ color: '#a5d6a7' }} />
               <Typography variant="body1" sx={{ color: '#c8e6c9', fontSize: 15 }}>
-                +91-99999 99999
+                +91 9307068889 /+91 97305 66577 /+91 94210 33554
               </Typography>
             </Stack>
             <Stack direction="row" alignItems="center" spacing={1}>
               <EmailIcon sx={{ color: '#a5d6a7' }} />
               <Typography variant="body1" sx={{ color: '#c8e6c9', fontSize: 15 }}>
-                info@krmlandscape.com
+                krmlandscape@gmail.com
               </Typography>
             </Stack>
 

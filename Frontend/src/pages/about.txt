@@ -1,0 +1,378 @@
+/* About.css */
+.about-root {
+  margin-top: 80px;
+}
+
+.about-main {
+  margin-top: 120px;
+  padding: 1rem;
+  /* background: linear-gradient(135deg, #dcedc8 0%, #aed581 100%); */
+}
+
+.about-hero {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  text-align: center;
+  margin: auto;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  font-size: 2.75rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.hero-subtitle {
+  color: #e0f2f1;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.hero-description {
+  color: #f1f8e9;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+  background-color: #66bb6a !important;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #388e3c !important;
+}
+
+.btn-secondary {
+  border-color: #a5d6a7 !important;
+  color: #a5d6a7 !important;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(165, 214, 167, 0.1) !important;
+  border-color: #66bb6a !important;
+  color: #66bb6a !important;
+}
+
+.section-heading {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.section-text {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.quote-box {
+  background-color: #e8f5e9;
+  padding: 2rem;
+  border-left: 6px solid #66bb6a;
+  margin-bottom: 3rem;
+}
+
+.quote-text {
+  font-style: italic;
+  color: #4caf50;
+  text-align: center;
+}
+
+.info-card {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.value-card {
+  background-color: #f1f8e9;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.why-card {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #e8f5e9;
+}
+
+.section {
+  
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.soft-bg {
+  
+  background-color: #f9fdf9;
+}
+
+
+
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+{/* <Typography variant="h4" className="section-heading">
+            Our Mission, Vision & Goal
+          </Typography>
+          <Grid container spacing={2} mt={2} mb={6} justifyContent="center">
+            {[{
+              title: "Our Mission",
+              icon: <Forest fontSize="large" color="success" />,
+              desc: "To build landscapes that breathe life into spaces while respecting nature’s balance."
+            }, {
+              title: "Our Vision",
+              icon: <EmojiObjects fontSize="large" color="success" />,
+              desc: "To be a national leader in green innovation and nature-first designs."
+            }, {
+              title: "Our Goal",
+              icon: <Engineering fontSize="large" color="success" />,
+              desc: "To deliver reliable, creative, and cost-effective landscaping solutions to every client."
+            }].map((item, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index} display="inline" justifyContent="center">
+                <Paper elevation={4} className="info-card" sx={{ width: "100%", maxWidth: 300, textAlign: "center", p: 3 }}>
+                  {item.icon}
+                  <Typography variant="h6" fontWeight="bold" mt={2}>{item.title}</Typography>
+                  <Typography variant="body2">{item.desc}</Typography>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid> */}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+<Box className="section soft-bg">
+                  <Container>
+                    <Typography variant="h4" align="center" fontWeight="bold" gutterBottom>
+                      Our Approach to Green Living
+                    </Typography>
+                    <Typography align="center" paragraph>
+                      At KRM Landscape, we cultivate immersive environments where nature meets sophistication.
+                      From design to maintenance, our services include native species planning,
+                      resource-efficient layouts, seasonal flora management, and sustainable water systems.
+                    </Typography>
+          
+                    <Stack direction={{ xs: "column", md: "row" }} spacing={4} mt={4} justifyContent="center">
+                      <Paper className="info-card">
+                        <Spa fontSize="large" color="success" />
+                        <Typography variant="h6" fontWeight="bold" mt={2}>
+                          Eco-Conscious Planning
+                        </Typography>
+                        <Typography>
+                          Smart irrigation, natural materials, and low-impact layouts are core to our philosophy.
+                        </Typography>
+                      </Paper>
+                      <Paper className="info-card">
+                        <Forest fontSize="large" color="success" />
+                        <Typography variant="h6" fontWeight="bold" mt={2}>
+                          Nature-Centric Designs
+                        </Typography>
+                        <Typography>
+                          Native plants, pollinator gardens, and climate-aware strategies drive our designs.
+                        </Typography>
+                      </Paper>
+                      <Paper className="info-card">
+                        <Grass fontSize="large" color="success" />
+                        <Typography variant="h6" fontWeight="bold" mt={2}>
+                          Harmonious Growth
+                        </Typography>
+                        <Typography>
+                          Landscapes that flourish seasonally and sustainably with expert care programs.
+                        </Typography>
+                      </Paper>
+                    </Stack>
+                  </Container>
+                </Box>
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+<Container>
+          <Typography variant="h4" className="section-heading">
+            Who We Are
+          </Typography>
+          <Typography className="section-text">
+            KRM Landscape is a visionary firm committed to blending environmental awareness with artistic landscaping. Our work is rooted in sustainability, creativity, and purpose-driven execution.
+          </Typography>
+
+          <Paper elevation={3} className="quote-box">
+            <Typography variant="h6" className="quote-text">
+              "To inspire and shape environments where nature thrives in harmony with human experiences."
+            </Typography>
+          </Paper>
+          <Typography variant="h4" className="section-heading">
+            Our Core Values
+          </Typography>
+          <Grid container spacing={3} mt={2} mb={6} justifyContent="center">
+            {["Sustainability 🌍", "Creativity 🎨", "Client-Centric 🤝", "Craftsmanship 🛠️", "Innovation 🚀"].map((value, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index} display="flex" justifyContent="center">
+                <Card elevation={3} className="value-card" sx={{ width: "100%", maxWidth: 280 }}>
+                  <CardContent>
+                    <Typography variant="h6" fontWeight="bold">{value}</Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+
+          <Typography variant="h4" className="section-heading">
+            What We Do & Why Choose Us
+          </Typography>
+          <Grid container spacing={4} mt={2} justifyContent="center">
+            {[{
+              title: "Personalized Designs",
+              desc: "Each project is custom-built to reflect your personality and needs."
+            }, {
+              title: "Affordable Pricing",
+              desc: "Cost-effective solutions that don’t compromise quality."
+            }, {
+              title: "Skilled Professionals",
+              desc: "Experienced horticulturists and designers on every project."
+            }, {
+              title: "Timely Project Delivery",
+              desc: "On-time execution with transparent milestones."
+            }].map((item, index) => (
+              <Grid item xs={12} sm={6} md={3} key={index} display="flex" justifyContent="center">
+                <Paper elevation={4} className="why-card" sx={{ width: "100%", maxWidth: 280, textAlign: "center", p: 2 }}>
+                  <StarRate fontSize="large" color="success" />
+                  <Typography variant="h6" fontWeight="bold" mt={2}>{item.title}</Typography>
+                  <Typography variant="body2">{item.desc}</Typography>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+{/* <Typography variant="h4" className="section-heading">
+            Our Core Values
+          </Typography>
+          <Grid container spacing={3} mt={2} mb={6} justifyContent="center">
+            {["Sustainability 🌍", "Creativity 🎨", "Client-Centric 🤝", "Craftsmanship 🛠️", "Innovation 🚀"].map((value, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index} display="flex" justifyContent="center">
+                <Card elevation={3} className="value-card" sx={{ width: "100%", maxWidth: 280 }}>
+                  <CardContent>
+                    <Typography variant="h6" fontWeight="bold">{value}</Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid> */}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+{/* what we do and why to choose us section */}
+
+      {/* <Typography variant="h4" className="section-heading">
+            What We Do & Why Choose Us
+          </Typography>
+          <Grid container spacing={4} mt={2} justifyContent="center">
+            {[{
+              title: "Personalized Designs",
+              desc: "Each project is custom-built to reflect your personality and needs."
+            }, {
+              title: "Affordable Pricing",
+              desc: "Cost-effective solutions that don’t compromise quality."
+            }, {
+              title: "Skilled Professionals",
+              desc: "Experienced horticulturists and designers on every project."
+            }, {
+              title: "Timely Project Delivery",
+              desc: "On-time execution with transparent milestones."
+            }].map((item, index) => (
+              <Grid item xs={12} sm={6} md={3} key={index} display="flex" justifyContent="center">
+                <Paper elevation={4} className="why-card" sx={{ width: "100%", maxWidth: 280, textAlign: "center", p: 2 }}>
+                  <StarRate fontSize="large" color="success" />
+                  <Typography variant="h6" fontWeight="bold" mt={2}>{item.title}</Typography>
+                  <Typography variant="body2">{item.desc}</Typography>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .info-card {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.value-card {
+  background-color: #f1f8e9;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.why-card {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #e8f5e9;
+}
+
+.section {
+  
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.soft-bg {
+  
+  background-color: #f9fdf9;
+} */
+
