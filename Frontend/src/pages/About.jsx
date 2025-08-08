@@ -60,53 +60,141 @@ const About = () => {
 
 
       {/* WHo we are section */}
+      {/* <Box sx={{
+        background: "linear-gradient(to right, #e8f5e9, #ffffff)",
+        padding: "2rem",
+        borderRadius: "8px"
+      }}>
 
-      <Container maxWidth="lg">
-        {/* <Container disableGutters maxWidth={false}> */}
-        <Box className="about-section">
-          <Typography variant="h4" className="section-heading">
-            Who We Are
-          </Typography>
-          <Typography className="section-text">
-            KRM Landscape is a visionary firm committed to blending environmental awareness with artistic landscaping. Our work is rooted in sustainability, creativity, and purpose-driven execution.
-          </Typography>
+        <Container maxWidth="lg">
+          
+          <Box className="about-section">
+            <Typography variant="h4" className="section-heading">
+              Who We Are
+            </Typography>
+            <Typography className="section-text">
+              KRM Landscape is a visionary firm committed to blending environmental awareness with artistic landscaping. Our work is rooted in sustainability, creativity, and purpose-driven execution.
+            </Typography>
 
-          <Paper elevation={3} className="quote-box">
+            <Paper elevation={3} className="quote-box">
+              <Typography variant="h6" className="quote-text">
+                "To inspire and shape environments where nature thrives in harmony with human experiences."
+              </Typography>
+            </Paper>
+          </Box>
+        </Container>
+      </Box> */}
+
+
+      {/* Who We Are Section */}
+      <Box
+        sx={{
+          background: "linear-gradient(to right, #e8f5e9, #ffffff)",
+          padding: { xs: "1.5rem", md: "2rem" },
+          borderRadius: "8px"
+        }}
+      >
+        <Container maxWidth="lg">
+          <Grid
+            container
+            spacing={4}
+            alignItems="center"
+          >
+            {/* Left Block - Image */}
+            <Grid item xs={12} md={6}>
+              <Box
+                component="img"
+                src="/images/ab.jpg" // replace with your image path
+                alt="KRM Landscape"
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: "8px",
+                  boxShadow: 3,
+                  display: "block",
+                  objectFit: "cover",
+                }}
+              />
+            </Grid>
+
+            {/* Right Block - Text */}
+            <Grid item xs={12} md={6}>
+              <Typography
+                variant="h4"
+                className="section-heading"
+                sx={{ textAlign: { xs: "center", md: "left" } }}
+              >
+                Who We Are
+              </Typography>
+              <Typography
+                className="section-text"
+                sx={{
+                  textAlign: { xs: "center", md: "left" },
+                  maxWidth: "100%",
+                }}
+              >
+                KRM Landscape is a visionary firm committed to blending
+                environmental awareness with artistic landscaping. Our work
+                is rooted in sustainability, creativity, and purpose-driven
+                execution.
+              </Typography>
+            </Grid>
+          </Grid>
+
+          {/* Quote Box - Full Width */}
+          <Paper
+            elevation={3}
+            className="quote-box"
+            sx={{
+              mt: 4,
+              maxWidth: "800px",
+              mx: "auto",
+              textAlign: "center",
+            }}
+          >
             <Typography variant="h6" className="quote-text">
               "To inspire and shape environments where nature thrives in harmony with human experiences."
             </Typography>
           </Paper>
-        </Box>
-      </Container>
+        </Container>
+      </Box>
+
+
 
       {/* Our Mission, Vision & Goal section */}
+      <Box sx={{
+        background: "linear-gradient(to right, #81c784, #e8f5e9)",
+        padding: "2rem",
+        borderRadius: "8px"
+      }}>
 
-      <Typography variant="h4" className="section-heading-2">
-        Our Mission, Vision & Goal
-      </Typography>
-      <Grid container spacing={2} mt={2} mb={6} justifyContent="center">
-        {[{
-          title: "Our Mission",
-          icon: <Forest fontSize="large" color="success" />,
-          desc: "To build landscapes that breathe life into spaces while respecting nature’s balance."
-        }, {
-          title: "Our Vision",
-          icon: <EmojiObjects fontSize="large" color="success" />,
-          desc: "To be a national leader in green innovation and nature-first designs."
-        }, {
-          title: "Our Goal",
-          icon: <Engineering fontSize="large" color="success" />,
-          desc: "To deliver reliable, creative, and cost-effective landscaping solutions to every client."
-        }].map((item, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index} display="inline" justifyContent="center">
-            <Paper elevation={4} className="info-card" sx={{ width: "100%", maxWidth: 300, textAlign: "center", p: 3 }}>
-              {item.icon}
-              <Typography variant="h6" fontWeight="bold" mt={2}>{item.title}</Typography>
-              <Typography variant="body2">{item.desc}</Typography>
-            </Paper>
-          </Grid>
-        ))}
-      </Grid>
+        <Typography variant="h4" className="section-heading">
+          Our Mission, Vision & Goal
+        </Typography>
+        <Grid container spacing={2} mt={2} mb={6} justifyContent="center" backgroundColor="linear-gradient(135deg, #1b5e20 0%, #33691e 100%)">
+          {[{
+            title: "Our Mission",
+            icon: <Forest fontSize="large" color="success" />,
+            desc: "To build landscapes that breathe life into spaces while respecting nature’s balance."
+          }, {
+            title: "Our Vision",
+            icon: <EmojiObjects fontSize="large" color="success" />,
+            desc: "To be a national leader in green innovation and nature-first designs."
+          }, {
+            title: "Our Goal",
+            icon: <Engineering fontSize="large" color="success" />,
+            desc: "To deliver reliable, creative, and cost-effective landscaping solutions to every client."
+          }].map((item, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index} display="inline" justifyContent="center">
+              <Paper elevation={4} className="info-card" sx={{ width: "100%", maxWidth: 300, textAlign: "center", p: 3 }}>
+                {item.icon}
+                <Typography variant="h6" fontWeight="bold" mt={2}>{item.title}</Typography>
+                <Typography variant="body2">{item.desc}</Typography>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
 
       {/* Our core values section */}
 
@@ -129,33 +217,40 @@ const About = () => {
 
 
       {/* what we do and why to choose us section */}
+      <Box sx={{
+        background: "linear-gradient(to right, #e8f5e9, #ffffff)",
+        paddingBottom: "2rem",
+        paddingTop: "2rem",
+        width: "100%",
+      }}>
 
-      <Typography variant="h4" className="section-heading">
-        What We Do & Why Choose Us
-      </Typography>
-      <Grid container spacing={4} mt={2} mb={4} justifyContent="center">
-        {[{
-          title: "Personalized Designs",
-          desc: "Each project is custom-built to reflect your personality and needs."
-        }, {
-          title: "Affordable Pricing",
-          desc: "Cost-effective solutions that don’t compromise quality."
-        }, {
-          title: "Skilled Professionals",
-          desc: "Experienced horticulturists and designers on every project."
-        }, {
-          title: "Timely Project Delivery",
-          desc: "On-time execution with transparent milestones."
-        }].map((item, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index} display="flex" justifyContent="center">
-            <Paper elevation={4} className="why-card" sx={{ width: "100%", maxWidth: 280, textAlign: "center", p: 2 }}>
-              <StarRate fontSize="large" color="success" />
-              <Typography variant="h6" fontWeight="bold" mt={2}>{item.title}</Typography>
-              <Typography variant="body2">{item.desc}</Typography>
-            </Paper>
-          </Grid>
-        ))}
-      </Grid>
+        <Typography variant="h4" className="section-heading">
+          What We Do & Why Choose Us
+        </Typography>
+        <Grid container spacing={4} mt={2} mb={4} justifyContent="center">
+          {[{
+            title: "Personalized Designs",
+            desc: "Each project is custom-built to reflect your personality and needs."
+          }, {
+            title: "Affordable Pricing",
+            desc: "Cost-effective solutions that don’t compromise quality."
+          }, {
+            title: "Skilled Professionals",
+            desc: "Experienced horticulturists and designers on every project."
+          }, {
+            title: "Timely Project Delivery",
+            desc: "On-time execution with transparent milestones."
+          }].map((item, index) => (
+            <Grid item xs={12} sm={6} md={3} key={index} display="flex" justifyContent="center">
+              <Paper elevation={4} className="why-card" sx={{ width: "100%", maxWidth: 280, textAlign: "center", p: 2 }}>
+                <StarRate fontSize="large" color="success" />
+                <Typography variant="h6" fontWeight="bold" mt={2}>{item.title}</Typography>
+                <Typography variant="body2">{item.desc}</Typography>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
 
 
 
