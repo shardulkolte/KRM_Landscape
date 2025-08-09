@@ -94,69 +94,75 @@ const About = () => {
           borderRadius: "8px"
         }}
       >
-        <Container maxWidth="lg">
-          <Grid
-            container
-            spacing={4}
-            alignItems="center"
-          >
-            {/* Left Block - Image */}
-            <Grid item xs={12} md={6}>
-              <Box
-                component="img"
-                src="/images/ab.jpg" // replace with your image path
-                alt="KRM Landscape"
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                  borderRadius: "8px",
-                  boxShadow: 3,
-                  display: "block",
-                  objectFit: "cover",
-                }}
-              />
-            </Grid>
-
-            {/* Right Block - Text */}
-            <Grid item xs={12} md={6}>
-              <Typography
-                variant="h4"
-                className="section-heading"
-                sx={{ textAlign: { xs: "center", md: "left" } }}
-              >
-                Who We Are
-              </Typography>
-              <Typography
-                className="section-text"
-                sx={{
-                  textAlign: { xs: "center", md: "left" },
-                  maxWidth: "100%",
-                }}
-              >
-                KRM Landscape is a visionary firm committed to blending
-                environmental awareness with artistic landscaping. Our work
-                is rooted in sustainability, creativity, and purpose-driven
-                execution.
-              </Typography>
-            </Grid>
+        {/* <Container maxWidth="lg"> */}
+        <Grid container spacing={2} alignItems="center">
+          {/* Left Block - Image */}
+          <Grid item xs={12} md={6}>
+            <Box
+              component="img"
+              src="/images/ab.jpg"
+              alt="KRM Landscape"
+              sx={{
+                width: "100%",
+                height: "100%",
+                borderRadius: "8px",
+                boxShadow: 3,
+                objectFit: "cover",
+                maxHeight: { md: "500px" } // Increase height
+              }}
+            />
           </Grid>
 
-          {/* Quote Box - Full Width */}
-          <Paper
-            elevation={3}
-            className="quote-box"
-            sx={{
-              mt: 4,
-              maxWidth: "800px",
-              mx: "auto",
-              textAlign: "center",
-            }}
-          >
-            <Typography variant="h6" className="quote-text">
-              "To inspire and shape environments where nature thrives in harmony with human experiences."
+          {/* Right Block - Text */}
+          <Grid item xs={12} md={6}>
+            <Typography
+              variant="h4"
+              className="section-heading"
+              sx={{ textAlign: { xs: "center", md: "left" }, mb: 2 }}
+            >
+              Who We Are
             </Typography>
-          </Paper>
-        </Container>
+            <Typography
+              className="section-text"
+              sx={{
+                textAlign: { xs: "center", md: "left" },
+                maxWidth: "100%",
+              }}
+            >
+                At KRM Landscape, we are passionate about transforming spaces into vibrant, green, and welcoming environments.
+                With expertise in plant supply, pot selection, indoor setups, kitchen gardens, and full-scale landscape maintenance,
+                we bring nature closer to you in the most beautiful and sustainable way possible.
+
+                From homes to offices, hotels to commercial complexes, we design solutions tailored to your space, style, and vision.
+                Our commitment goes beyond just delivering plants or décor—we provide expert guidance, personalized service,
+                and long-lasting results that enhance both aesthetics and well-being.
+
+                {/* Whether it’s creating a lush indoor corner, designing a functional kitchen garden,
+                or maintaining a large outdoor landscape, we ensure every detail is handled with care and creativity.
+                Our goal is simple: to help you connect with nature while elevating the beauty, functionality,
+                and health of your surroundings.
+
+                With KRM Landscape, you don’t just get greenery—you get a complete experience of growth, beauty, and sustainability. */}
+            </Typography>
+          </Grid>
+        </Grid>
+
+        {/* Quote Box - Full Width */}
+        <Paper
+          elevation={3}
+          className="quote-box"
+          sx={{
+            mt: 4,
+            maxWidth: "800px",
+            mx: "auto",
+            textAlign: "center",
+          }}
+        >
+          <Typography variant="h6" className="quote-text">
+            "To inspire and shape environments where nature thrives in harmony with human experiences."
+          </Typography>
+        </Paper>
+        {/* </Container> */}
       </Box>
 
 
